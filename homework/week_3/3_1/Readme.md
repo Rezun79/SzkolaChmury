@@ -14,9 +14,8 @@
   
 ### \<department>
 
-* HumanResource - hr
+* HumanResource = hr
 * CyberSecurity = cs
-* Customer Care = cc
 * Infromation Technology = it
 * Research & Development = rd
   
