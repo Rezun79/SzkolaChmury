@@ -1,43 +1,89 @@
-Konwencja nazw zasobów w Azure dla firmy Global Cloud Corporation
+# Konwencja nazw zasobów w Azure dla firmy Global Cloud Corporation
 
-#### Słownik
+## Słownik
 
-**\<companyprefix>**
+### \<companyprefix>
+
 * Global Cloud Corporation = gcc
 
-**\<location>**
+### \<branch>
+
 * Hiszpania = es
 * Wielka Brytania = uk
 * Polska = pl
   
-**\<env>**
-* Produkcja - prd
-* PreProd - pre
-* Development - dev
+### \<department>
+
+* HumanResource - hr
+* CyberSecurity = cs
+* Customer Care = cc
+* Infromation Technology = it
+* Research & Development = rd
   
-**\<resourcetype>**
-* ResourceGroup- rg
-* VNET - vnet
-* StrageAccount- sa
-* Disk - hdd
+### \<team>
 
-**\<application/system>**
-* app1
+* DevTeamOne = dt1
+* OperationTemOne = ot1
 
-### Przykłady
+### \<solution>
 
-##### Resource group
+### \<vm_os>
 
-\<companyprefix><location><env>-<resourcetype>-<object_number>
-np. gccplprd-rg-001
+* Windows = w
+* Linux = l
+  
+### \<vm_service>
 
-##### VNET
+* DataBase = db
+* Remote Desktop Services = rds
+* Web Application =  web
+* .Net Service Bus = nsb
 
+### \<env>
 
-##### Virtual machine
+* Produkcja = prd
+* PreProd = pre
+* Development = dev
 
+### \<object_number>
 
-##### Disk
+* <000..999>
 
+## Przykłady
 
-##### Storage Account
+### Resource group
+
+\<companyprefix><branch>-<env>(<department><team><solution>)-rg-<object_number>
+
+* gccpl-prd-rg-001
+* gcces-pre-hr-rg-001
+* gcces-pre-hr-rg-001
+* gccuk-pre-rd-dt1-rg-001
+
+### VNET
+
+\<companyprefix>\<branch>-\<env>\(\<department>\<team>\<solution>\)-vnet-<object_number>
+
+* gccuk-pre-rd-dt1-vnet-001
+
+### Virtual machine
+
+\<companyprefix>\<branch>\<env>\(\<department>\<team>\<solution>\)vm\<vm_os>\<vm_service>\<object_number>
+
+* gccukdevrddt1vmwnsb001
+
+### Disk
+
+#### OS Disk
+
+* <vm_name>_OsDisk
+  
+#### Data Disk
+
+* <vm_name>_DataDisk_\<object_number>
+
+### Storage Account
+
+\<companyprefix>\<branch>\<env>\(\<department>\<team>\<solution>\)sa\<object_number>
+
+* gccukdevrddt1sa001
