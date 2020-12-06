@@ -27,6 +27,9 @@
 
 ### \<solution>
 
+* Customer relationship management = crm
+* Electronic Health Record = ehr
+
 ### \<vm_os>
 
 * Windows = w
@@ -34,7 +37,7 @@
   
 ### \<vm_service>
 
-* DataBase = db
+* DataBase = dbs
 * Remote Desktop Services = rds
 * Web Application =  web
 * .Net Service Bus = nsb
@@ -53,12 +56,13 @@
 
 ### Resource group
 
-\<companyprefix><branch>-<env>(<department><team><solution>)-rg-<object_number>
+\<companyprefix>\<branch>-\<env>\(\<department>\<team>\<solution>\)-rg-\<object_number>
 
 * gccpl-prd-rg-001
 * gcces-pre-hr-rg-001
 * gcces-pre-hr-rg-001
 * gccuk-pre-rd-dt1-rg-001
+* gccuk-dev-rd-dt1-ehr-rg-001
 
 ### VNET
 
@@ -71,6 +75,7 @@
 \<companyprefix>\<branch>\<env>\(\<department>\<team>\<solution>\)vm\<vm_os>\<vm_service>\<object_number>
 
 * gccukdevrddt1vmwnsb001
+* gccukdevrddt1ehrvmwdbs001
 
 ### Disk
 
