@@ -69,7 +69,7 @@
 
 * gccuk-pre-rd-dt1-vnet-001
 
-### Virtual machine
+### Virtual machine (\<vm_name>)
 
 \<companyprefix>\<branch>\<env>\(\<department>\<team>\<solution>\)vm\<vm_os>\<vm_service>\<object_number>
 
@@ -84,7 +84,7 @@
   
 #### Data Disk
 
-* <vm_name>_DataDisk_\<object_number>
+* <vm_name>\_DataDisk\_\<object_number>
 
 ### Storage Account
 
