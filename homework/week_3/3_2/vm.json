@@ -77,7 +77,7 @@
     "publicIpAddressName": "[concat(parameters('vmName'), 'PublicIP' )]",
     "networkInterfaceName": "[concat(parameters('vmName'),'NetInt')]",
     "osDiskType": "Standard_LRS",
-    "subnetRef": "reference('VNET').outputs.virtualNetworkName.value, reference('VNET').outputs.virtualSubNet.value",
+    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName'))]",
         "linuxConfiguration": {
       "disablePasswordAuthentication": true,
       "ssh": {
@@ -99,8 +99,8 @@
       "name": "[variables('networkInterfaceName')]",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'VNet')]",
-        "[resourceId('Microsoft.Resources/deployments', 'NSG')]",
+        "[resourceId('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
         "[resourceId('Microsoft.Network/publicIpAddresses/', variables('publicIpAddressName'))]"
       ],
       "properties": {

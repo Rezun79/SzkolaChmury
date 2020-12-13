@@ -44,27 +44,14 @@
         "networkSecurityGroupName":{"value": "nsg_Ubuntu"}
         }
       }
-    },
-
-    {
-      "name": "VM",
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2019-10-01",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/nsg.json",
-          "contentVersion": "1.0.0.0"
-        },
-      "parameters": {
-        "networkSecurityGroupName":{"value": "nsg_Ubuntu"}
-        }
-      }
     }
-
-
-
-
   ],
-  "outputs": {}
+  "outputs": {
+
+        "vnetname": {
+            "type": "string",
+            "value": "[reference('VNET').outputs.vnetname.value]"
+        }
+
+  }
 }

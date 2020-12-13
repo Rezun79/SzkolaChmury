@@ -44,7 +44,10 @@
 
     },
     "functions": [],
-    "variables": {},
+    "variables": {
+
+      
+    },
     "resources": [
 
     {
@@ -74,9 +77,9 @@
     ],
     "outputs": {
 
-        "vnet": {
-            "type": "string",
-            "value": "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]"
+        "vnetname": {
+            "value": "Hello World",
+            "type" : "string"
         }
 
     }
