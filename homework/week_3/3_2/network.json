@@ -46,7 +46,7 @@
     "functions": [],
     "variables": {
 
-      
+
     },
     "resources": [
 
@@ -78,7 +78,11 @@
     "outputs": {
 
         "vnetname": {
-            "value": "Hello World",
+            "value": "[parameters('virtualNetworkName')]",
+            "type" : "string"
+        },
+        "subnetname": {
+            "value": "[parameters('subnetName')]",
             "type" : "string"
         }
 
