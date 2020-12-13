@@ -21,23 +21,39 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://rezcorpsavms.blob.core.windows.net/json/network.json?sp=r&st=2020-12-13T11:52:45Z&se=2020-12-13T19:52:45Z&spr=https&sv=2019-12-12&sr=b&sig=cwPdOChMmIvg5aDS%2F8zROhq09PT%2FOgRtMoC7fPFhAL0%3D",
+          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/network.json",
           "contentVersion": "1.0.0.0"
         },
         "parametersLink": {
-          "uri": "https://rezcorpsavms.blob.core.windows.net/json/network.parameters.json?sp=r&st=2020-12-13T12:30:06Z&se=2020-12-14T20:30:06Z&spr=https&sv=2019-12-12&sr=b&sig=VbM%2BVD82GigWd5WAfe1FQbYQ%2Ba0jHgc6U%2FJPnoR50fg%3D",
+          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/network.parameters.json",
           "contentVersion": "1.0.0.0"
         }
       }
     },
-        {
+    {
       "name": "NSG",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-10-01",
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://rezcorpsavms.blob.core.windows.net/json/nsg.json?sp=r&st=2020-12-13T14:27:05Z&se=2020-12-14T22:27:05Z&sip=31.178.8.67&spr=https&sv=2019-12-12&sr=b&sig=qGZzDKGKlNfZC0Av1kaNihw2oGWcwG2xK1IgkphBIjU%3D",
+          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/nsg.json",
+          "contentVersion": "1.0.0.0"
+        },
+      "parameters": {
+        "networkSecurityGroupName":{"value": "nsg_Ubuntu"}
+        }
+      }
+    },
+
+    {
+      "name": "VM",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2019-10-01",
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/nsg.json",
           "contentVersion": "1.0.0.0"
         },
       "parameters": {
@@ -45,6 +61,9 @@
         }
       }
     }
+
+
+
 
   ],
   "outputs": {}
