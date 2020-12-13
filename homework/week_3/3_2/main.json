@@ -51,6 +51,10 @@
         "vnetname": {
             "type": "string",
             "value": "[reference('VNET').outputs.vnetname.value]"
+        },
+        "subnetname": {
+            "type": "string",
+            "value": "[reference('VNET').outputs.subnetname.value]"
         }
 
   }
