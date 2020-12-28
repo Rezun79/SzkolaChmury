@@ -63,16 +63,6 @@
         "subnet2name": {
             "type": "string",
             "value": "[reference('VNET').outputs.subnet2name.value]"
-        },
-
-        "NSG1ID": {
-            "type": "string",
-            "value": "[reference('NSG').outputs.NSG1ID.value]"
-        },
-
-        "NSG2ID": {
-            "type": "string",
-            "value": "[reference('NSG').outputs.NSG2ID.value]"
         }
 
   }
