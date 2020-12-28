@@ -13,9 +13,17 @@
 
     "networkSecurityGroupName": {
       "type": "string",
-      "defaultValue": "SecGroupNet",
+      "defaultValue": "SecGroupNet1",
       "metadata": {
-        "description": "Name of the Network Security Group"
+        "description": "NSG VM1"
+      }
+    },
+
+    "networkSecurityGroup2Name": {
+      "type": "string",
+      "defaultValue": "SecGroupNet2",
+      "metadata": {
+        "description": "NSG VM2"
       }
     }
 
@@ -28,6 +36,30 @@
       "type": "Microsoft.Network/networkSecurityGroups",
       "apiVersion": "2020-06-01",
       "name": "[parameters('networkSecurityGroupName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "SSH",
+            "properties": {
+              "priority": 1000,
+              "protocol": "TCP",
+              "access": "Allow",
+              "direction": "Inbound",
+              "sourceAddressPrefix": "*",
+              "sourcePortRange": "*",
+              "destinationAddressPrefix": "*",
+              "destinationPortRange": "22"
+            }
+          }
+        ]
+      }
+    },
+
+        {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2020-06-01",
+      "name": "[parameters('networkSecurityGroup2Name')]",
       "location": "[parameters('location')]",
       "properties": {
         "securityRules": [

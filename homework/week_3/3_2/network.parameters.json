@@ -7,16 +7,23 @@
       "value": "vNet1"
     },
 
+    "addressPrefix": {
+      "value": "10.2.0.0/24"
+    },
+
     "subnetName": {
       "value": "Subnet1"
     },
 
     "subnetAddressPrefix": {
-      "value": "10.2.0.0/24"
+      "value": "10.2.1.0/24"
+    },
+    "subnet2Name": {
+      "value": "Subnet2"
     },
 
-    "addressPrefix": {
-      "value": "10.2.0.0/24"
+    "subnet2AddressPrefix": {
+      "value": "10.2.2.0/24"
     }
   }
 }
