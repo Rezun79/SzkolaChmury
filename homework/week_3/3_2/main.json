@@ -34,9 +34,6 @@
 
     {
       "name": "VNet",
-      "dependsOn": [
-        "[resourceId('Microsoft.Resources/deployments', 'NSG')]"
-      ],
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-10-01",
       "properties": {
