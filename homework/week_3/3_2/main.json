@@ -60,30 +60,11 @@
           "contentVersion": "1.0.0.0"
         },
         "parametersLink": {
-          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm1.parameters.json",
-          "contentVersion": "1.0.0.0"
-        }
-      }
-    },
-
-        {
-      "name": "VM2",
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2019-10-01",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm.json",
-          "contentVersion": "1.0.0.0"
-        },
-        "parametersLink": {
-          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm2.parameters.json",
+          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm.parameters.json",
           "contentVersion": "1.0.0.0"
         }
       }
     }
-
-
 
   ],
   "outputs": {
