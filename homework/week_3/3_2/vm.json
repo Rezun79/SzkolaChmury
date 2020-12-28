@@ -26,6 +26,17 @@
         "description": "The name of you Virtual Machine."
       }
     },
+
+    "virtualNetworkName": {
+      "type": "string",
+      "defaultValue": "vNET1"
+    },
+
+    "subnetName": {
+      "type": "string",
+      "defaultValue": "Subnet1"
+    },
+
     "adminUsername": {
       "type": "string",
       "metadata": {
@@ -99,7 +110,6 @@
       "name": "[variables('networkInterfaceName')]",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Network/networkSecurityGroups/', parameters('networkSecurityGroupName'))]",
         "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]",
         "[resourceId('Microsoft.Network/publicIpAddresses/', variables('publicIpAddressName'))]"
       ],
@@ -117,10 +127,7 @@
               }
             }
           }
-        ],
-        "networkSecurityGroup": {
-          "id": "[resourceId('Microsoft.Network/networkSecurityGroups',parameters('networkSecurityGroupName'))]"
-        }
+        ]
       }
     },
 

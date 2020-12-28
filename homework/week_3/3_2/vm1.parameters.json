@@ -10,6 +10,9 @@
     },
     "dnsLabelPrefix": {
       "value": "GEN-UNIQUE"
+    },
+    "subnetName":{
+      "value": "Subnet1"
     }
   }
 }
