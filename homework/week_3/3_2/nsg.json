@@ -87,9 +87,20 @@
             "value": "[parameters('networkSecurityGroupName')]",
             "type" : "string"
         },
+
         "networkSecurityGroup2Name": {
             "value": "[parameters('networkSecurityGroup2Name')]",
             "type" : "string"
+        },
+
+        "NSG1ID": {
+            "type": "string",
+            "value": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
+        }, 
+
+        "NSG2ID": {
+            "type": "string",
+            "value": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroup2Name'))]"
         }
 
     }

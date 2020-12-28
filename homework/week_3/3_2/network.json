@@ -79,7 +79,7 @@
             "properties": {
               "addressPrefix": "[parameters('subnetAddressPrefix')]",
               "networkSecurityGroup": {
-                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', reference('NSG').outputs.networkSecurityGroupName.value)]"
+                "id": "[reference('NSG').outputs.NSG1ID.value]"
               },
               "privateEndpointNetworkPolicies": "Enabled",
               "privateLinkServiceNetworkPolicies": "Enabled"
@@ -90,7 +90,7 @@
             "properties": {
               "addressPrefix": "[parameters('subnet2AddressPrefix')]",
               "networkSecurityGroup": {
-                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', reference('NSG').outputs.networkSecurityGroup2Name.value)]"
+                "id": "[reference('NSG').outputs.NSG2ID.value]"
               },
               "privateEndpointNetworkPolicies": "Enabled",
               "privateLinkServiceNetworkPolicies": "Enabled"

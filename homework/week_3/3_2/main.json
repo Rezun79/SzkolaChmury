@@ -16,6 +16,9 @@
   "resources": [
     {
       "name": "VNet",
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'NSG')]"
+      ],
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-10-01",
       "properties": {
@@ -71,6 +74,16 @@
         "networkSecurityGroup2Name": {
             "type": "string",
             "value": "[reference('NSG').outputs.networkSecurityGroup2Name.value]"
+        },
+
+        "NSG1ID": {
+            "type": "string",
+            "value": "[reference('NSG').outputs.NSG1ID.value]"
+        },
+
+        "NSG2ID": {
+            "type": "string",
+            "value": "[reference('NSG').outputs.NSG2ID.value]"
         }
 
   }
