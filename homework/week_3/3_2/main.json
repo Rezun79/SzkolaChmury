@@ -57,11 +57,11 @@
         "mode": "Incremental",
         "templateLink": {
           "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm.json",
-          "contentVersion": "1.0.0.1"
+          "contentVersion": "1.0.0.0"
         },
         "parametersLink": {
           "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm.parameters.json",
-          "contentVersion": "1.0.0.1"
+          "contentVersion": "1.0.0.0"
         }
       }
     }
