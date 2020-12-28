@@ -81,5 +81,16 @@
     }
 
     ],
-    "outputs": {}
+    "outputs": {
+
+      "networkSecurityGroupName": {
+            "value": "[parameters('networkSecurityGroupName')]",
+            "type" : "string"
+        },
+        "networkSecurityGroup2Name": {
+            "value": "[parameters('networkSecurityGroup2Name')]",
+            "type" : "string"
+        }
+
+    }
 }

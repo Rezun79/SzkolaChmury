@@ -18,6 +18,7 @@
     "subnetAddressPrefix": {
       "value": "10.2.1.0/24"
     },
+    
     "subnet2Name": {
       "value": "Subnet2"
     },

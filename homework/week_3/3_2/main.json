@@ -41,7 +41,8 @@
           "contentVersion": "1.0.0.0"
         },
       "parameters": {
-        "networkSecurityGroupName":{"value": "nsg_Ubuntu"}
+        "networkSecurityGroupName":{"value": "NSG_Ubuntu1"},
+        "networkSecurityGroup2Name":{"value": "NSG_Ubuntu2"}
         }
       }
     }
@@ -60,6 +61,16 @@
         "subnet2name": {
             "type": "string",
             "value": "[reference('VNET').outputs.subnet2name.value]"
+        },
+
+        "networkSecurityGroupName": {
+            "type": "string",
+            "value": "[reference('NSG').outputs.networkSecurityGroupName.value]"
+        },
+
+        "networkSecurityGroup2Name": {
+            "type": "string",
+            "value": "[reference('NSG').outputs.networkSecurityGroup2Name.value]"
         }
 
   }
