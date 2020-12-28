@@ -9,7 +9,47 @@
       "metadata": {
         "description": "Location for all resources."
       }
-    }
+    },
+
+      "vaultSubscription": {
+        "type": "string",
+        "defaultValue": "[subscription().subscriptionId]",
+        "metadata": {
+          "description": "The name of the subscription that contains the keyvault."
+        }
+      },
+
+      "vaultResourceGroupName": {
+        "type": "string",
+        "defaultValue": "rezcorp-rg-security",
+        "metadata": {
+          "description": "The name of the resource group that contains the keyvault."
+        }
+      },
+
+      "vaultName": {
+        "type": "string",
+        "defaultValue": "rezcorpkeyvault",
+        "metadata": {
+          "description": "The name of the keyvault that contains the secret."
+        }
+      },
+
+      "vaultSecretAdminPassword": {
+        "type": "string",
+        "defaultValue": "UbuntuRoot",
+        "metadata": {
+          "description": "The name of the secret for admin password."
+        }
+      },
+
+      "vaultSecretAdminUsername": {
+        "type": "string",
+        "defaultValue": "UbuntuRootName",
+        "metadata": {
+          "description": "The name of the secret for admin username."
+        }
+      }
 
   },
   "variables": {},
@@ -59,9 +99,34 @@
           "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm.json",
           "contentVersion": "1.0.0.0"
         },
-        "parametersLink": {
-          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm.parameters.json",
-          "contentVersion": "1.0.0.0"
+        "parameters": {
+
+          "vmName": {
+            "value": "Ubuntu1"
+          },
+
+          "subnetName":{
+            "value": "Subnet1"
+          },
+
+            "adminUsername":{
+                "reference": {
+                    "keyVault": {
+                        "id": "[resourceId(parameters('vaultSubscription'), parameters('vaultResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vaultName'))]"
+                    },
+                    "secretName": "[parameters('vaultSecretAdminUsername')]"
+                }
+            },
+
+          "adminPassword":{
+              "reference": {
+                  "keyVault": {
+                      "id": "[resourceId(parameters('vaultSubscription'), parameters('vaultResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vaultName'))]"
+                    },
+                    "secretName": "[parameters('vaultSecretAdminPassword')]"
+                }
+            }
+
         }
       }
     }
