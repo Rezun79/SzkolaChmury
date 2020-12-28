@@ -11,7 +11,7 @@
       "value": "admin"
     },
     "adminPasswordOrKey": {
-      "value": ""
+      "value": "securestring"
     },
     "subnetName":{
       "value": "Subnet1"
