@@ -13,7 +13,7 @@
 
     "networkSecurityGroupName": {
       "type": "string",
-      "defaultValue": "SecGroupNet1",
+      "defaultValue": "NSG_Ubuntu1",
       "metadata": {
         "description": "NSG VM1"
       }
@@ -21,7 +21,7 @@
 
     "networkSecurityGroup2Name": {
       "type": "string",
-      "defaultValue": "SecGroupNet2",
+      "defaultValue": "NSG_Ubuntu2",
       "metadata": {
         "description": "NSG VM2"
       }
@@ -34,7 +34,7 @@
 
     {
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2020-05-01",
       "name": "[parameters('networkSecurityGroupName')]",
       "location": "[parameters('location')]",
       "properties": {
@@ -58,7 +58,7 @@
 
         {
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2020-05-01",
       "name": "[parameters('networkSecurityGroup2Name')]",
       "location": "[parameters('location')]",
       "properties": {
