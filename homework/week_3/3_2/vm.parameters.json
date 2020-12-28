@@ -13,9 +13,6 @@
     "adminPasswordOrKey": {
       "value": "Zaq12wsx!@#"
     },
-    "dnsLabelPrefix": {
-      "value": "Ubuntu1Vm1"
-    },
     "subnetName":{
       "value": "Subnet1"
     }
