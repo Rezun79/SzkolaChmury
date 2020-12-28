@@ -32,22 +32,6 @@
           "contentVersion": "1.0.0.0"
         }
       }
-    },
-    {
-      "name": "NSG",
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2019-10-01",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/nsg.json",
-          "contentVersion": "1.0.0.0"
-        },
-      "parameters": {
-        "networkSecurityGroupName":{"value": "NSG_Ubuntu1"},
-        "networkSecurityGroup2Name":{"value": "NSG_Ubuntu2"}
-        }
-      }
     }
   ],
   "outputs": {
@@ -64,26 +48,6 @@
         "subnet2name": {
             "type": "string",
             "value": "[reference('VNET').outputs.subnet2name.value]"
-        },
-
-        "networkSecurityGroupName": {
-            "type": "string",
-            "value": "[reference('NSG').outputs.networkSecurityGroupName.value]"
-        },
-
-        "networkSecurityGroup2Name": {
-            "type": "string",
-            "value": "[reference('NSG').outputs.networkSecurityGroup2Name.value]"
-        },
-
-        "NSG1ID": {
-            "type": "string",
-            "value": "[reference('NSG').outputs.NSG1ID.value]"
-        },
-
-        "NSG2ID": {
-            "type": "string",
-            "value": "[reference('NSG').outputs.NSG2ID.value]"
         }
 
   }
