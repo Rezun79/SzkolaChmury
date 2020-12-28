@@ -21,7 +21,6 @@
 
     "addressPrefix": {
       "type": "string",
-      "defaultValue": "10.1.0.0/24",
       "metadata": {
         "description": "Name of the subnet in the virtual network"
       }
@@ -36,7 +35,6 @@
 
     "subnetAddressPrefix": {
       "type": "string",
-      "defaultValue": "10.1.0.0/24",
       "metadata": {
         "description": "Subnet One address in the VNET One"
       }
@@ -67,7 +65,7 @@
 
     {
       "type": "Microsoft.Network/virtualNetworks",
-      "apiVersion": "2020-06-01",
+      "apiVersion": "2020-05-01",
       "name": "[parameters('virtualNetworkName')]",
       "location": "[parameters('location')]",
       "properties": {
