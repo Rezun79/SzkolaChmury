@@ -27,7 +27,6 @@
     },
     "subnetName": {
       "type": "string",
-      "defaultValue": "Subnet",
       "metadata": {
         "description": "Subnet One in the VNET One"
       }
@@ -104,6 +103,10 @@
         },
         "subnetname": {
             "value": "[parameters('subnetName')]",
+            "type" : "string"
+        },
+        "subnet2name": {
+            "value": "[parameters('subnet2Name')]",
             "type" : "string"
         }
 
