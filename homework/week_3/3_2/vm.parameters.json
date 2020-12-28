@@ -8,13 +8,13 @@
     },
 
     "adminUsername": {
-      "value": "GEN-UNIQUE"
+      "value": "admin"
     },
     "adminPasswordOrKey": {
-      "value": "GEN-PASSWORD"
+      "value": "Zaq12wsx!@#"
     },
     "dnsLabelPrefix": {
-      "value": "GEN-UNIQUE"
+      "value": "test.it"
     },
     "subnetName":{
       "value": "Subnet1"
