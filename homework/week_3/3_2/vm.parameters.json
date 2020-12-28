@@ -8,10 +8,10 @@
     },
 
     "adminUsername": {
-      "value": "tomreztom"
+      "value": ""
     },
     "adminPasswordOrKey": {
-      "value": "securestring"
+      "value": ""
     },
     "subnetName":{
       "value": "Subnet1"
