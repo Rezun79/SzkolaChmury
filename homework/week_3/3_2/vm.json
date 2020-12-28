@@ -29,7 +29,7 @@
 
     "virtualNetworkName": {
       "type": "string",
-      "defaultValue": "vNET1"
+      "defaultValue": "vNet1"
     },
 
     "subnetName": {
