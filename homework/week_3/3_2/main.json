@@ -37,7 +37,7 @@
 
       "AdminPassword": {
         "type": "string",
-        "defaultValue": "UbuntuRoot",
+        "defaultValue": "UbuntuRootPass",
         "metadata": {
           "description": "The name of the secret for admin password."
         }
