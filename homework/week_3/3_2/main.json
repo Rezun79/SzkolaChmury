@@ -114,7 +114,7 @@
             "adminUsername":{
                 "reference": {
                     "keyVault": {
-                        "id": "[resourceId(subscription().id, parameters('ResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vault'))]"
+                        "id": "[resourceId(parameters('Subscription'), parameters('ResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vault'))]"
                     },
                     "secretName": "[parameters('AdminUsername')]"
                 }
@@ -123,7 +123,7 @@
           "adminPassword":{
               "reference": {
                   "keyVault": {
-                      "id": "[resourceId(subscription().id, parameters('ResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vault'))]"
+                      "id": "[resourceId(parameters('Subscription'), parameters('ResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vault'))]"
                     },
                     "secretName": "[parameters('AdminPassword')]"
                 }
