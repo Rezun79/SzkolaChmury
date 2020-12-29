@@ -11,7 +11,7 @@
       }
     },
 
-      "vaultSubscription": {
+      "Subscription": {
         "type": "string",
         "defaultValue": "[subscription().subscriptionId]",
         "metadata": {
@@ -19,7 +19,7 @@
         }
       },
 
-      "vaultResourceGroupName": {
+      "ResourceGroupName": {
         "type": "string",
         "defaultValue": "rezcorp-rg-security",
         "metadata": {
@@ -27,7 +27,7 @@
         }
       },
 
-      "vaultName": {
+      "vault": {
         "type": "string",
         "defaultValue": "rezcorpkeyvault",
         "metadata": {
@@ -35,7 +35,7 @@
         }
       },
 
-      "vaultSecretAdminPassword": {
+      "AdminPassword": {
         "type": "string",
         "defaultValue": "UbuntuRoot",
         "metadata": {
@@ -43,7 +43,7 @@
         }
       },
 
-      "vaultSecretAdminUsername": {
+      "AdminUsername": {
         "type": "string",
         "defaultValue": "UbuntuRootName",
         "metadata": {
@@ -76,6 +76,7 @@
       "name": "VNet",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-10-01",
+      "dependsOn": ["NSG"],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -93,6 +94,7 @@
       "name": "VM1",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-10-01",
+      "dependsOn": ["VNet"],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -112,18 +114,61 @@
             "adminUsername":{
                 "reference": {
                     "keyVault": {
-                        "id": "[resourceId(parameters('vaultSubscription'), parameters('vaultResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vaultName'))]"
+                        "id": "[resourceId(subscription().id, parameters('ResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vault'))]"
                     },
-                    "secretName": "[parameters('vaultSecretAdminUsername')]"
+                    "secretName": "[parameters('AdminUsername')]"
                 }
             },
 
           "adminPassword":{
               "reference": {
                   "keyVault": {
-                      "id": "[resourceId(parameters('vaultSubscription'), parameters('vaultResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vaultName'))]"
+                      "id": "[resourceId(subscription().id, parameters('ResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vault'))]"
                     },
-                    "secretName": "[parameters('vaultSecretAdminPassword')]"
+                    "secretName": "[parameters('AdminPassword')]"
+                }
+            }
+
+        }
+      }
+    },
+
+    {
+      "name": "VM2",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2019-10-01",
+      "dependsOn": ["VNet"],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://raw.githubusercontent.com/Rezun79/SzkolaChmury/master/homework/week_3/3_2/vm.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parameters": {
+
+          "vmName": {
+            "value": "Ubuntu2"
+          },
+
+          "subnetName":{
+            "value": "Subnet2"
+          },
+
+            "adminUsername":{
+                "reference": {
+                    "keyVault": {
+                        "id": "[resourceId(parameters('Subscription'), parameters('ResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vault'))]"
+                    },
+                    "secretName": "[parameters('AdminUsername')]"
+                }
+            },
+
+          "adminPassword":{
+              "reference": {
+                  "keyVault": {
+                      "id": "[resourceId(parameters('Subscription'), parameters('ResourceGroupName'), 'Microsoft.KeyVault/vaults', parameters('vault'))]"
+                    },
+                    "secretName": "[parameters('AdminPassword')]"
                 }
             }
 
