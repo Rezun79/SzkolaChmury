@@ -111,6 +111,10 @@
             "value": "Subnet1"
           },
 
+          "dnsLabelPrefix": {
+            "Value": "[toLower(concat('ubuntu-', uniqueString(resourceGroup().id)))]"
+          },
+
             "adminUsername":{
                 "reference": {
                     "keyVault": {
@@ -152,6 +156,10 @@
 
           "subnetName":{
             "value": "Subnet2"
+          },
+
+          "dnsLabelPrefix": {
+            "Value": "[toLower(concat('ubuntu-', uniqueString(resourceGroup().id)))]"
           },
 
             "adminUsername":{
