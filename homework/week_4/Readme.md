@@ -22,7 +22,7 @@ Po włączeniu JIT, z Azure Security Center, do NSG dodawane jest reguła blokuj
 
 W odpowiedzi na żądanie dostępu dodawana jest reguła odblokowująca ruch dla hosta/podsieci.
 
-![JIT NSG Allow](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/jit_allow.jpg)
+![JIT NSG Allow](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/JIT_Allow.jpg)
 
 
 ## Azure Bastion
