@@ -7,4 +7,20 @@
 
 #TYDZIEN4.2 „Poprzez Azure Monitor zacznij monitorować dyski, CPU, Memory, a następnie podłącz maszyny do Log Analytics. Zacznij zbierać dane takie jak eventy z logu Apliacation oraz System. Postaraj się utworzyć własne dashboardy, w których pokazywane będą zbierane dane ze zdarzeń oraz danych performansowych (zachęcamy też do popatrzenia na inne dane i tego co da się osiągnąć dzięki Log Analytics w kwestii bezpieczeństwa. Proszę podziel się swoimi wnioskami!)
 
+
+
 #TYDZIEN4.3 „Włącz dla maszyn Just-in-time (JIT) i zweryfikuj jakie zmiany nastąpiły na NSG oraz jak możesz zarządzać dostępem do maszyn. Dla utworzonych wcześniej maszyn wdróż usługę Azure Bastion, powyłączaj na VMkach Public IP. Podłącz się za pomocą Azure Basion do VM, opowiedz o plusach i minusach usługi”
+
+
+## JIT
+Po włączeniu JIT, z Azure Security Center, do NSG dodawane jest reguła blokująca połączenia (domyślnie dla 22,3389,5985,5986).
+Na żądanie dostępu dodawana jest reguła odblokowująca ruch dla hosta/podsieci.
+
+
+
+## Azure Bastion
+Usługa włączona .. działa.
+
++ wygodny sposób połączenia do VM
+- cena
+- zauważalnie gorsza responsywność niż przy połączeniu przy RDP
