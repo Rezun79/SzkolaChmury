@@ -11,12 +11,13 @@
 
 ## Custom dasboard
 
-Zbieranie metryk włączone, przygotowany dashboard
+Zbieranie metryk włączone, przygotowany dashboard"
 ![Dashboard](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/Dashboard.jpg)
 
 ## Events
 
-
+Zbieranie zdarzeń włączone, przygotowany dashboard:
+![Events](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/Events.jpg)
 
 /+ Możliwość podłączenia alertów do Logs query
 
