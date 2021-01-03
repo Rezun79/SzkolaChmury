@@ -18,7 +18,7 @@
 ## JIT
 Po włączeniu JIT, z Azure Security Center, do NSG dodawane jest reguła blokująca połączenia (domyślnie dla 22,3389,5985,5986).
 
-![JIT NSG](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/jit.jpg)
+![JIT NSG](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/JIT.jpg)
 
 W odpowiedzi na żądanie dostępu dodawana jest reguła odblokowująca ruch dla hosta/podsieci.
 
