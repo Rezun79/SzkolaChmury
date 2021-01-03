@@ -11,8 +11,14 @@
 
 ## Custom dasboard
 
-Zbieranie metryk włączone, przygotowany 
+Zbieranie metryk włączone, przygotowany dashboard
 ![Dashboard](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/Dashboard.jpg)
+
+## Events
+
+
+
+/+ Możliwość podłączenia alertów do Logs query
 
 
 # TYDZIEN4.3
