@@ -25,5 +25,6 @@ Na żądanie dostępu dodawana jest reguła odblokowująca ruch dla hosta/podsie
 Usługa włączona .. działa.
 
 \+ wygodny sposób połączenia do VM \
+\- konieczność wdrażania per VirtualNetwork \
 \- cena \
-\- zauważalnie gorsza responsywność niż przy połączeniu przy RDP \
+\- zauważalnie gorsza responsywność VM niż przy połączeniu RDP \
