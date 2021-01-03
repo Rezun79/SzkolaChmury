@@ -24,6 +24,6 @@ Na żądanie dostępu dodawana jest reguła odblokowująca ruch dla hosta/podsie
 ## Azure Bastion
 Usługa włączona .. działa.
 
-\+ wygodny sposób połączenia do VM \n
-\- cena \n
-\- zauważalnie gorsza responsywność niż przy połączeniu przy RDP \n
+\+ wygodny sposób połączenia do VM \
+\- cena \
+\- zauważalnie gorsza responsywność niż przy połączeniu przy RDP \
