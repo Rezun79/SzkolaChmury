@@ -8,11 +8,11 @@ Zainstalowany \
 
 ## Compliance
 
-Bardzo szczegółowy raport, z jasnymi wskazówkami co do eliminacji niezgodności.
-Udało się "testowo" wdrożyć kilka rekomendacji
+Bardzo szczegółowy raport, z jasnymi wskazówkami co do eliminacji niezgodności. \
+Udało się "testowo" wdrożyć kilka rekomendacji \
 
-\+ Pozwala lepiej zrozumieć wymagania regulatorów
-\+ Daje Możliwość dokumentowania zgodności infrastruktury z wykogami regulatorów (np. generowanie raportów)
+\+ Pozwala lepiej zrozumieć wymagania regulatorów \
+\+ Daje Możliwość dokumentowania zgodności infrastruktury z wykogami regulatorów (np. generowanie raportów) \
 
 
 # TYDZIEN4.2
@@ -20,15 +20,15 @@ Udało się "testowo" wdrożyć kilka rekomendacji
 
 ## Custom dasboard
 
-Zbieranie metryk włączone, przygotowany dashboard"
+Zbieranie metryk włączone, przygotowany dashboard" \
 ![Dashboard](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/Dashboard.jpg)
 
 ## Events
 
-Zbieranie zdarzeń włączone, przygotowany dashboard:
+Zbieranie zdarzeń włączone, przygotowany dashboard: \
 ![Events](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/Events.jpg)
 
-\+ Możliwość podłączenia alertów do Logs query
+\+ Możliwość podłączenia alertów do Logs query \
 
 
 # TYDZIEN4.3
