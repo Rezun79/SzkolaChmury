@@ -9,7 +9,7 @@ Zainstalowany \
 ## Compliance
 
 Bardzo szczegółowy raport, z jasnymi wskazówkami co do eliminacji niezgodności. \
-Udało się "testowo" wdrożyć kilka rekomendacji \
+Udało się "testowo" wdrożyć kilka rekomendacji. \
 
 \+ Pozwala lepiej zrozumieć wymagania regulatorów \
 \+ Daje Możliwość dokumentowania zgodności infrastruktury z wykogami regulatorów (np. generowanie raportów) \
@@ -50,5 +50,5 @@ Usługa włączona .. działa.
 
 \+ wygodny sposób połączenia do VM \
 \- konieczność wdrażania per VirtualNetwork \
-\- cena (ok 130Euro\\miesiąc \
+\- cena (ok 130Euro\\miesiąc) \
 \- zauważalnie gorsza responsywność VM niż przy połączeniu RDP \
