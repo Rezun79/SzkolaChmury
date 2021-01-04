@@ -1,9 +1,18 @@
 # TYDZIEN4.1
 „Przeanalizuj proszę Azure Security i zainstaluj Endpoint protection na wcześniej utworzonych Vmkach. Przejrzyj usługę Azure Security Center oraz poszukaj opcję rekomendacji pod względem spełniania regulacji - Regulatory Compliance PCI DSS. W miarę możliwości postaraj się wdrożyć dane rekomendacje i podziel się swoimi wnioskami!”
 
-## Zainstalowny Endpoint protection:
+## Endpoint protection:
 
+Zainstalowany \
 ![Installed Endpoint protection](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/Endpoint_protection.jpg)
+
+## Compliance
+
+Bardzo szczegółowy raport, z jasnymi wskazówkami co do eliminacji niezgodności.
+Udało się "testowo" wdrożyć kilka rekomendacji
+
+\+ Pozwala lepiej zrozumieć wymagania regulatorów
+\+ Daje Możliwość dokumentowania zgodności infrastruktury z wykogami regulatorów (np. generowanie raportów)
 
 
 # TYDZIEN4.2
@@ -19,7 +28,7 @@ Zbieranie metryk włączone, przygotowany dashboard"
 Zbieranie zdarzeń włączone, przygotowany dashboard:
 ![Events](https://github.com/Rezun79/SzkolaChmury/blob/master/homework/week_4/Images/Events.jpg)
 
-/+ Możliwość podłączenia alertów do Logs query
+\+ Możliwość podłączenia alertów do Logs query
 
 
 # TYDZIEN4.3
@@ -41,5 +50,5 @@ Usługa włączona .. działa.
 
 \+ wygodny sposób połączenia do VM \
 \- konieczność wdrażania per VirtualNetwork \
-\- cena \
+\- cena (ok 130Euro\\miesiąc \
 \- zauważalnie gorsza responsywność VM niż przy połączeniu RDP \
